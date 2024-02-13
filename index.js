@@ -5,7 +5,7 @@ const REGION = process.env.REGION || "us-west-2";
 AWS.config.update({ region: `${REGION}` });
 const dynamoDB = new AWS.DynamoDB.DocumentClient()
 app.get('/:item', readFromDynamoDB);
-app.get('/', (req, res) => res.send('Hi Karin and Fernando, specify an item like /cats'));
+app.get('/', (req, res) => res.send('Hi bob, specify an item like /cats'));
 
 app.listen(8080);
 console.log("listening on port 8080, Dynamo Region", REGION);
